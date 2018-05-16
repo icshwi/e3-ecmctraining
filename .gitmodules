@@ -1,0 +1,4 @@
+[submodule "ecmctraining"]
+	path = ecmctraining
+	url = https://bitbucket.org/europeanspallationsource/ecmctraining
+	ignore = all

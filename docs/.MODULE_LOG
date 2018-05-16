@@ -1,0 +1,16 @@
+>>
+Script is used     : create_e3_modules.bash
+Script Path        : /home/jhlee/e3/tools/template_gen
+User               : jhlee
+Log Time           : 2018May16-1532-57CEST
+e3 repo Hash       : 5a3deee
+>> 
+EPICS_MODULE_NAME  :                                                     ecmctraining
+E3_MODULE_SRC_PATH :                                                     ecmctraining
+EPICS_MODULE_URL   :                   https://bitbucket.org/europeanspallationsource
+E3_TARGET_URL      :                                        https://github.com/icshwi
+>> 
+e3 module name     :                                                  e3-ecmctraining
+e3 module url full :      https://bitbucket.org/europeanspallationsource/ecmctraining
+e3 target url full :                        https://github.com/icshwi/e3-ecmctraining
+>> 
