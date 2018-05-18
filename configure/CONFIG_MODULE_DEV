@@ -7,7 +7,7 @@ E3_MODULE_VERSION:=develop
 
 # DEPENDENT MODULE VERSION
 # Example, 
-#ASYN_DEP_VERSION:=4.33.0
+ASYN_DEP_VERSION:=4.33.0
 #SEQ_DEP_VERSION:=2.1.21
 #PCRE_DEP_VERSION:=8.41.
 #ADCORE_DEP_VERSION:=3.2.0
@@ -26,7 +26,7 @@ E3_MODULE_SRC_PATH:=ecmctraining-dev
 E3_MODULE_MAKEFILE:=$(EPICS_MODULE_NAME).Makefile
 
 #export E3_MODULE_DEV_GITURL:="https://where your git repo"
-E3_MODULE_DEV_GITURL:="https://bitbucket.org/europeanspallationsource/ecmctraining"
+E3_MODULE_DEV_GITURL:="https://bitbucket.org/jeonghanlee/ecmctraining"
 
 
 # The definitions shown below can also be placed in an untracked CONFIG_MODULE_DEV.local
