@@ -1,5 +1,5 @@
 require ecmc,5.0.0
-require ecmctraining,develop
+require ecmctraining,master
 require EthercatMC,2.0.1
 require stream, 2.7.7
 require iocStats,1856ef5
