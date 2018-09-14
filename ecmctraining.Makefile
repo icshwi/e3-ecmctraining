@@ -22,9 +22,9 @@
 #
 
 
-#where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
-
+where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
+include $(where_am_I)/../configure/DECOUPLE_FLAGS
 
 # If one would like to use the module dependency restrictly,
 # one should look at other modules makefile to add more
@@ -36,80 +36,6 @@ endif
 
 
 
-# *** ISSUES
-# driver.makefile recursively read all include directories which were installed.
-# The only way to exclude header files is....
-iocStats_VERSION=
-autosave_VERSION=
-#asyn_VERSION=
-busy_VERSION=
-modbus_VERSION=
-ipmiComm_VERSION=
-sequencer_VERSION=
-sscan_VERSION=
-
-std_VERSION=
-ip_VERSION=
-calc_VERSION=
-pcre_VERSION=
-stream_VERSION=
-s7plc_VERSION=
-recsync_VERSION=
-
-devlib2_VERSION=
-mrfioc2_VERSION=
-
-exprtk_VERSION=
-motor_VERSION=
-ecmc_VERSION=
-EthercatMC_VERSION=
-#ecmctraining_VERSION=
-
-
-keypress_VERSION=
-sysfs_VERSION=
-symbolname_VERSION=
-memDisplay_VERSION=
-regdev_VERSION=
-i2cDev_VERSION=
-
-tosca_VERSION=
-tsclib_VERSION=
-ifcdaqdrv2_VERSION=
-
-## The main issue is nds3, it is mandatory to disable it
-## 
-nds3_VERSION=
-nds3epics_VERSION=
-ifc14edrv_VERSION=
-ifcfastint_VERSION=
-
-
-nds_VERSION=
-loki_VERSION=
-nds_VERSION=
-sis8300drv_VERSION=
-sis8300_VERSION=
-sis8300llrfdrv_VERSION=
-sis8300llrf_VERSION=
-
-
-ADSupport_VERSION=
-ADCore_VERSION=
-ADSimDetector_VERSION=
-ADAndor_VERSION=
-ADAndor3_VERSION=
-ADPointGrey_VERSION=
-ADProsilica_VERSION=
-
-amcpico8_VERSION=
-adpico8_VERSION=
-adsis8300_VERSION=
-adsis8300bcm_VERSION=
-adsis8300bpm_VERSION=
-adsis8300fc_VERSION=
-
-# *** ISSUES
 
 APPDB:=db
 # APPSRC:=$(APP)/src
@@ -140,8 +66,6 @@ TEMPLATES += $(wildcard $(APPDB)/*.substitutions)
 ## db rule is the default in RULES_DB, so add the empty one
 ## Please look at e3-mrfioc2 for example.
 
-EPICS_BASE_HOST_BIN = $(EPICS_BASE)/bin/$(EPICS_HOST_ARCH)
-MSI = $(EPICS_BASE_HOST_BIN)/msi
 
 USR_DBFLAGS += -I . -I ..
 USR_DBFLAGS += -I $(EPICS_BASE)/db
