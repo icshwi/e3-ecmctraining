@@ -38,6 +38,7 @@ endif
 
 
 APPDB:=db
+APPPROTO:=protocol
 # APPSRC:=$(APP)/src
 
 
@@ -57,6 +58,7 @@ APPDB:=db
 TEMPLATES += $(wildcard $(APPDB)/*.db)
 TEMPLATES += $(wildcard $(APPDB)/*.template)
 TEMPLATES += $(wildcard $(APPDB)/*.substitutions)
+TEMPLATES += $(wildcard $(APPPROTO)/*.proto)
 
 
 
