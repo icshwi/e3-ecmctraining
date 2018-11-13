@@ -24,7 +24,7 @@
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
-include $(where_am_I)/../configure/DECOUPLE_FLAGS
+include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
 # If one would like to use the module dependency restrictly,
 # one should look at other modules makefile to add more
@@ -92,3 +92,7 @@ $(TMPS):
 .PHONY: db $(SUBS) $(TMPS)
 
 
+#
+.PHONY: vlibs
+vlibs:
+#
