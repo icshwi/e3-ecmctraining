@@ -17,41 +17,19 @@
 #
 # Author  : Jeong Han Lee
 # email   : jeonghan.lee@gmail.com
-# Date    : Thursday, September 13 19:15:56 CEST 2018
-# version : 0.0.2
+# Date    : Thursday, March 28 23:37:37 CET 2019
+# version : 0.0.3
 #
-
-
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
 include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 
-# If one would like to use the module dependency restrictly,
-# one should look at other modules makefile to add more
-# In most case, one should ignore the following lines:
-
-ifneq ($(strip $(ASYN_DEP_VERSION)),)
-asyn_VERSION=$(ASYN_DEP_VERSION)
-endif
-
-
-EXCLUDE_ARCHS += linux-ppc64e6500
-
+EXCLUDE_ARCHS += linux-ppc64e6500 
+EXCLUDE_ARCHS += linux-corei7-poky
 
 APPDB:=db
 APPPROTO:=protocol
-# APPSRC:=$(APP)/src
-
-
-# USR_INCLUDES += -I$(where_am_I)$(APPSRC)
-
-# USR_CFLAGS   += -Wno-unused-variable
-# USR_CFLAGS   += -Wno-unused-function
-# USR_CFLAGS   += -Wno-unused-but-set-variable
-# USR_CPPFLAGS += -Wno-unused-variable
-# USR_CPPFLAGS += -Wno-unused-function
-# USR_CPPFLAGS += -Wno-unused-but-set-variable
-
+APPCMDS:=startup
 
 # All ecmctraining startup scripts use template, and substitutions
 # So, we have to keep them as it is.
@@ -61,6 +39,10 @@ TEMPLATES += $(wildcard $(APPDB)/*.template)
 TEMPLATES += $(wildcard $(APPDB)/*.substitutions)
 TEMPLATES += $(wildcard $(APPPROTO)/*.proto)
 
+
+#SCRIPTS   += $(wildcard $(APPCMDS)/general/*)
+#SCRIPTS   += $(wildcard $(APPCMDS)/hardware/ecmc*)
+#SCRIPTS   += $(wildcare $(APPCMDS)/motion/ecmc_*)
 
 
 
