@@ -1,8 +1,8 @@
 EPICS_MODULE_NAME:=ecmctraining
 #
-EPICS_MODULE_TAG:=anders/dev20190125
+EPICS_MODULE_TAG:=master
 #
-E3_MODULE_VERSION:=develop
+E3_MODULE_VERSION:=master
 #
 ASYN_DEP_VERSION:=4.33.0
 #
